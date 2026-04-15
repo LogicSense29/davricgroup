@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #111827;
+  
+  /* Dav-Ric New Brand Palette (Red & Gray) */
+  --davic-primary: #dc2626; /* Industrial Red from Logo */
+  --davic-secondary: #4b5563; /* Slate Gray */
+  --davic-accent: #111827; /* Deep Charcoal */
+  --davic-gray-light: #f9fafb;
+  --davic-gray-medium: #e5e7eb;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-davic-primary: var(--davic-primary);
+  --color-davic-secondary: var(--davic-secondary);
+  --color-davic-accent: var(--davic-accent);
+  --color-davic-gray-light: var(--davic-gray-light);
+  --color-davic-gray-medium: var(--davic-gray-medium);
+  
+  --font-sans: var(--font-outfit);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  html {
+    font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-davic-secondary selection:text-white;
+    font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+    position: relative;
+  }
+  
+  /* Noise Overlay */
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.03;
+    z-index: 9999;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight font-black uppercase;
+    font-family: var(--font-outfit), Outfit, ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.05em;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-davic-accent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-davic-primary border-4 border-davic-accent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-700;
+}
+
+.clipped {
+  width: 100%;
+  height: 100%;
+  background-color: var(--davic-primary);
+  clip-path: url(#heroClip);
+  -webkit-clip-path: url(#heroClip); /* Safari */
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+@layer utilities {
+  .animate-ken-burns {
+    animation: ken-burns 20s ease-in-out infinite alternate;
+  }
+  
+  .text-glow-sm {
+    text-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
+  }
+  
+  .bg-industrial {
+     background-image: radial-gradient(circle at 2px 2px, rgba(0,0,0,0.05) 1px, transparent 0);
+     background-size: 24px 24px;
+  }
+}
+
+@keyframes ken-burns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
