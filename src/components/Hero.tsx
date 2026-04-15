@@ -9,7 +9,7 @@ import Link from "next/link";
 const SLIDES = [
     {
     image: "/davricgroup-oilandgas2.jpg",
-    title: "SUPPLY",
+    title: "SUPPLYS",
     subtitle: "ENERGY",
     tagline: "Powering industries with clean, resilient energy",
     cta: "Renewable Energy",
@@ -33,8 +33,8 @@ const SLIDES = [
   },
     {
     image: "/davric-home-w.jpeg",
-    title: "PRIME",
-    subtitle: "ESTATES",
+    title: "ESTATES",
+    subtitle: "PRIME",
     tagline: "Beautiful Homes for Everyone",
     cta: "Our Homes",
     href: "/home",
@@ -191,7 +191,7 @@ export default function Hero() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className="group relative w-16 h-1 overflow-hidden bg-white/10"
+                className="group relative w-8 md:w-12 lg:w-16 h-1 overflow-hidden bg-white/10"
               >
                 <motion.div 
                   initial={false}
@@ -213,7 +213,7 @@ export default function Hero() {
             ))}
           </div>
             <div className="mt-2 text-right">
-               <span className="text-6xl font-black text-white/5 block leading-none tracking-tighter">0{currentIndex + 1}</span>
+               <span className="text-4xl md:text-5xl lg:text-6xl font-black text-white/5 block leading-none tracking-tighter">0{currentIndex + 1}</span>
             </div>
           </motion.div>
         </div>

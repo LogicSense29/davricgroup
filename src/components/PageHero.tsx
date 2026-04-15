@@ -41,13 +41,13 @@ export default function PageHero({ title, subtitle, image, category }: PageHeroP
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24">
+      <div className="relative z-10 h-full flex flex-col justify-center px-8 md:px-16 lg:px-24 mt-6">
         <div className="max-w-7xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="space-y-6"
+            className="space-y-4"
           >
             {category && (
               <div className="flex items-center gap-4 text-davic-primary">
@@ -55,7 +55,7 @@ export default function PageHero({ title, subtitle, image, category }: PageHeroP
                 <span className="text-[10px] uppercase font-black tracking-[0.5em]">{category}</span>
               </div>
             )}
-            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-[7vw] font-black text-white leading-[0.85] tracking-tighter uppercase">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[5vw] font-black text-white leading-[0.95] tracking-tighter uppercase">
               {
                 // title.split(" ").map((line, index) => (
                 //   <span key={index} className="block">

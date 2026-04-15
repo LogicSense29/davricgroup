@@ -13,10 +13,10 @@ const navLinks = [
     name: "Subsidiaries",
     href: "/#subsidiaries",
     dropdown: [
-      { name: "Davic Oil & Gas", href: "/oil-gas" },
-      { name: "Davic Construction", href: "/construction" },
-      { name: "Davic Telecom Services", href: "/telecom" },
-        { name: "Davic Homes", href: "/homes" },
+      { name: "Oil & Gas", href: "/oil-gas" },
+      { name: "Construction", href: "/construction" },
+      { name: "Telecom Services", href: "/telecom" },
+        { name: "Homes", href: "/homes" },
     ],
   },
   { name: "Ojerinkporo Foundation", href: "https://ojerinkporofoundation.com" },
@@ -72,7 +72,7 @@ export default function Navigation() {
             href="/" 
             className="flex items-center gap-2 group relative z-50"
           >
-            <div className="relative w-[220px] h-[50px] sm:w-[280px] sm:h-[65px] md:w-[320px] md:h-[75px] transition-all duration-500 scale-100 group-hover:scale-105">
+            <div className="relative w-[220px] h-[55px] sm:w-[280px] sm:h-[65px] md:w-[320px] md:h-[75px] transition-all duration-500 scale-100 group-hover:scale-105">
                <Image 
                  src="/davric-group-logo.png"
                  alt="Davic Group Logo"
