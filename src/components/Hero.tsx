@@ -9,7 +9,7 @@ import Link from "next/link";
 const SLIDES = [
     {
     image: "/davricgroup-oilandgas2.jpg",
-    title: "DISTRIBUTION",
+    title: "SUPPLY",
     subtitle: "ENERGY",
     tagline: "Powering industries with clean, resilient energy",
     cta: "Renewable Energy",
@@ -17,15 +17,15 @@ const SLIDES = [
   },
   {
     image: "/davricgroup-telecom2.jpeg",
-    title: "ENGINEERING",
+    title: "SERVICES",
     subtitle: "TELECOM",
-    tagline: "Innovation through accuracy and technical excellence",
-    cta: "Precision Engineering",
+    tagline: "Maintenance and services that keep you connected",
+    cta: "Our Services",
     href: "/telecom",
   },
         {
     image: "/davricgroup-construction4.jpeg",
-    title: "INFRASTRUCTURE",
+    title: "STRUCTURE",
     subtitle: "GLOBAL",
     tagline: "Building the foundations of a sustainable future",
     cta: "Our Infrastructure",
@@ -33,8 +33,8 @@ const SLIDES = [
   },
     {
     image: "/davric-home-w.jpeg",
-    title: "HOMES",
-    subtitle: "DAVRIC",
+    title: "PRIME",
+    subtitle: "ESTATES",
     tagline: "Beautiful Homes for Everyone",
     cta: "Our Homes",
     href: "/home",
