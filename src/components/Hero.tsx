@@ -9,7 +9,7 @@ import Link from "next/link";
 const SLIDES = [
     {
     image: "/davricgroup-oilandgas2.jpg",
-    title: "SUPPLYS",
+    title: "SUPPLIES",
     subtitle: "ENERGY",
     tagline: "Powering industries with clean, resilient energy",
     cta: "Renewable Energy",
