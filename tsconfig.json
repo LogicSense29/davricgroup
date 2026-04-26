@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "src/components/FileUpload.jsx", "src/app/api/upload-chunk/route.js"  ],
   "exclude": ["node_modules"]
 }

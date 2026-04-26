@@ -252,7 +252,7 @@ export default function CinematicGallery() {
           </div>
 
           {/* Bottom stat strip */}
-          <div className="grid grid-cols-3 border border-t-0 border-davic-gray-medium -mt-10">
+          <div className="grid grid-cols-3 border border-t-0 border-davic-gray-medium md:-mt-10">
             {[
               { num: "4+", label: "Active Sectors" },
               { num: "20+", label: "Years of Operations" },
