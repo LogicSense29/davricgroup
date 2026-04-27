@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-   compress: true,
+  compress: true,
+  async redirects() {
+    return [
+      {
+        source: "/webmail",
+        destination: "https://business16.web-hosting.com:2096/",
+        permanent: false,
+      },
+    ];
+  },
     images: {
     remotePatterns: [
       {

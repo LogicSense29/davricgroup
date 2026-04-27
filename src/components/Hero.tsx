@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const SLIDES = [
     {
-    image: "/davricgroup-oilandgas2.jpg",
+    image: "/public/davricgroup-oilandgas.png",
     title: "SUPPLIES",
     subtitle: "ENERGY",
     tagline: "Powering industries with clean, resilient energy",
